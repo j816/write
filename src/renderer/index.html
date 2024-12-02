@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Writing Assistant</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div id="left-panel" class="panel">
+            <div class="tab-container">
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="prompts">Writing Prompts</button>
+                    <button class="tab-button" data-tab="assistant">AI Assistant</button>
+                </div>
+                <div id="prompts-tab" class="tab-content active">
+                    <div class="panel-controls">
+                        <select id="prompts-category" class="dropdown">
+                            <option value="">Select Category</option>
+                        </select>
+                        <button id="select-prompts-folder">Select Prompts Folder</button>
+                        <button id="prompt-now" class="prompt-button" disabled>Prompt Now</button>
+                    </div>
+                    <div class="prompt-list"></div>
+                </div>
+                <div id="assistant-tab" class="tab-content">
+                    <div class="chat-container">
+                        <div id="chat-messages"></div>
+                        <div class="chat-input">
+                            <textarea id="chat-input" placeholder="Type your message..."></textarea>
+                            <div class="chat-buttons">
+                                <button id="send-message">Send</button>
+                                <button id="clear-chat">Clear History</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="middle-panel" class="panel">
+            <div id="editor-container" contenteditable="true" placeholder="Start writing here..."></div>
+            <div class="button-container">
+                <button id="submit-feedback">Submit for Feedback</button>
+                <button id="save-writing">Save Writing</button>
+                <button id="clear-editor">Clear</button>
+            </div>
+        </div>
+        
+        <div id="right-panel" class="panel">
+            <div class="tab-container">
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="feedback">AI Feedback</button>
+                    <button class="tab-button" data-tab="criteria">Criteria</button>
+                    <button class="tab-button" data-tab="settings">Settings</button>
+                </div>
+                <div id="feedback-tab" class="tab-content active">
+                    <div class="feedback-content"></div>
+                </div>
+                <div id="criteria-tab" class="tab-content">
+                    <div class="panel-controls">
+                        <select id="criteria-category" class="dropdown">
+                            <option value="">Select Category</option>
+                        </select>
+                        <select id="criteria-set" class="dropdown">
+                            <option value="">Select Criteria Set</option>
+                        </select>
+                        <button id="select-criteria-folder">Select Criteria Folder</button>
+                    </div>
+                    <div class="criteria-list"></div>
+                </div>
+                <div id="settings-tab" class="tab-content"></div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html> 
