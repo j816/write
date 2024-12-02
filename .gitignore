@@ -1,0 +1,17 @@
+# macOS system files
+.DS_Store
+
+# Node.js dependencies (if using Node.js)
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Build files
+dist/
+build/
